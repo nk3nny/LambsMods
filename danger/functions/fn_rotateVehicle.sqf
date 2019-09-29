@@ -41,7 +41,7 @@ for "_i" from 1 to 7 do {
 	};
 };
 
-if (_pos isEqualTo []) exitWith {_pos = _unit modelToWorldVisual [0,-100,0]};
+if (_pos isEqualTo []) then {_pos = _unit modelToWorldVisual [0,-100,0]};
 
 private _targetKnowledge = _unit targetKnowledge _target;
 private _lookAtPos = (_targetKnowledge select 6);
