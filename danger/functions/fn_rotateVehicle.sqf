@@ -21,9 +21,9 @@ params ["_unit", ["_target", [0,0,0]], ["_threshold", 18]];
 
 // cannot move or moving
 if (!canMove _unit || {currentCommand _unit == "MOVE"}) exitWith {true};
-
+private _distance = _unit distance _target;
 // CQB tweak
-if (_unit distance _target < lambs_danger_CQB_range) exitWith {true};
+if (_distance < lambs_danger_CQB_range) exitWith {true};
 
 // within acceptble limits
 if (_unit getRelDir _target < _threshold || {_unit getRelDir _target > (360-_threshold)}) exitWith {true};
@@ -42,6 +42,14 @@ for "_i" from 1 to 7 do {
 };
 
 if (_pos isEqualTo []) exitWith {_pos = _unit modelToWorldVisual [0,-100,0]};
+
+private _targetKnowledge = _unit targetKnowledge _target;
+private _lookAtPos = (_targetKnowledge select 6);
+_lookAtPos = _lookAtPos vectorAdd [_targetKnowledge select 5 * _distance, _targetKnowledge select 5 * _distance, 0];
+{
+	_x lookAt _lookAtPos;
+	nil;
+} count crew _unit;
 
 // move
 _unit doMove _pos;
