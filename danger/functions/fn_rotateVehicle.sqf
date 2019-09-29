@@ -45,7 +45,9 @@ if (_pos isEqualTo []) exitWith {_pos = _unit modelToWorldVisual [0,-100,0]};
 
 private _targetKnowledge = _unit targetKnowledge _target;
 private _lookAtPos = (_targetKnowledge select 6);
-_lookAtPos = _lookAtPos vectorAdd [_targetKnowledge select 5 * _distance, _targetKnowledge select 5 * _distance, 0];
+private _offsetX = ((random ((_targetKnowledge select 5)) * 2) - (_targetKnowledge select 5));
+private _offsetZ = ((random ((_targetKnowledge select 5)) * 2) - (_targetKnowledge select 5));
+_lookAtPos = _lookAtPos vectorAdd [_offsetX * _distance, _offsetZ * _distance, 0];
 {
 	_x lookAt _lookAtPos;
 	nil;
