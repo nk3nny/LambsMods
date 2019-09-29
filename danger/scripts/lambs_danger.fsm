@@ -1,4 +1,4 @@
-/*%FSM<COMPILE "scriptedFSM.cfg, Danger">*/
+/*%FSM<COMPILE "H:\SteamLibrary\steamapps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, Danger">*/
 /*%FSM<HEAD>*/
 /*
 item0[] = {"Player_or__not_l",4,218,255.185059,-194.629517,384.959351,-114.034012,12.000000,"Player or " \n "not local"};
@@ -19,7 +19,7 @@ item14[] = {"Reset_tac_timer",2,250,-690.000000,100.000000,-600.000000,150.00000
 item15[] = {"Causes__4_EXPLOSION",4,218,-426.824097,-51.676514,-316.824097,18.323486,5.000000,"Causes:" \n "4" \n "EXPLOSION or " \n "BULLET" \n ""};
 item16[] = {"Check_Panic",2,250,-416.824097,98.323486,-326.824097,148.323486,0.000000,"Check Panic"};
 item17[] = {"Cause_0_ENEMY_DE",4,218,-274.413330,-57.279205,-154.413330,12.720795,3.000000,"Cause 0" \n "ENEMY DETECTED"};
-item18[] = {"Gesture___Commun",2,4346,-275.053711,97.802673,-155.053711,147.802673,0.000000,"Gesture" \n "+ Communicate"};
+item18[] = {"Gesture___Commun",2,250,-275.053711,97.802673,-155.053711,147.802673,0.000000,"Gesture" \n "+ Communicate"};
 item19[] = {"Cause__8_CAN_FIRE",4,218,-1233.051636,-52.719620,-1090.094849,34.543472,2.000000,"Cause:" \n "8" \n "CAN FIRE" \n "(Infantry)"};
 item20[] = {"Stop_to_fire__Su",2,250,-1206.479980,95.479095,-1116.479980,145.479095,0.000000,"Stop to fire" \n "+Suppression"};
 item21[] = {"Check_queue__and",2,250,88.421204,493.995087,178.421204,543.995056,0.000000,"Check queue " \n "and " \n "clean-up"};
@@ -28,7 +28,7 @@ item23[] = {"Always",8,218,88.569214,648.158142,178.569214,698.158142,0.000000,"
 item24[] = {"Destroyed__Conti",2,250,-953.845398,349.327942,-863.845398,399.327942,0.000000,"Destroyed:" \n "Continue"};
 item25[] = {"Timeout__Continu",2,250,-956.233276,266.817749,-866.233276,316.817749,0.000000,"Timeout:" \n "Continue"};
 item26[] = {"Close_Combat",4,218,-1206.411377,349.669159,-1116.411377,399.669128,1.000000,"Close" \n "Combat"};
-item27[] = {"CQC____Assault_",2,250,-1210.305786,531.623779,-1116.799927,580.747314,0.000000,"CQC: " \n "+Assault" \n "+Ready"};
+item27[] = {"CQC____Assault_",2,4346,-1210.305786,531.623779,-1116.799927,580.747314,0.000000,"CQC: " \n "+Assault" \n "+Ready"};
 item28[] = {"Set_up_fire__Suppression",2,250,-1362.283691,638.544495,-1272.283691,688.544495,0.000000,"Set up fire" \n "+Suppression" \n "+Communicate"};
 item29[] = {"Destroyed",4,218,-971.292847,734.962402,-881.293091,784.962402,0.000000,"Destroyed"};
 item30[] = {"Cause__7_SCREAM",4,218,-1073.845825,-51.247833,-963.845581,18.752167,1.000000,"Cause:" \n "7" \n "SCREAM"};
@@ -131,8 +131,8 @@ link63[] = {48,30};
 link64[] = {48,31};
 link65[] = {48,49};
 link66[] = {49,28};
-globals[] = {0.000000,0,0,0,0,640,480,1,283,6316128,1,-915.116455,366.683228,754.729370,-296.394379,1078,884,1};
-window[] = {2,-1,-1,-32000,-32000,995,182,1685,182,3,1096};
+globals[] = {0.000000,0,0,0,0,640,480,1,283,6316128,1,-1458.865723,-476.607483,777.838501,-27.643829,1078,884,1};
+window[] = {2,-1,-1,-1,-1,1472,195,997,659,3,1096};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -173,8 +173,8 @@ class FSM
                          "//if (lambs_danger_debug_FSM) then {systemchat format [""init Danger.fsm %1 (%2 - %3s)"",side _this,name _this,round time];};" \n
                          "" \n
                          "// Settings " \n
-                         "//(vehicle _this) setVariable [""lastGesture"",0];" \n
-                         "//(vehicle _this) setVariable [""lastAction"",random 10]; " \n
+                         "//(vehicle _this) setVariable [""lamb_danger_lastGesture"",0];" \n
+                         "//(vehicle _this) setVariable [""lamb_danger_lastAction"",random 10]; " \n
                          "" \n
                          ""/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
@@ -233,7 +233,7 @@ class FSM
                          "// Enemy tank? Turn vehicle " \n
                          "if ((vehicle _this) isKindOf ""Tank"" && {speed _this < 12} && {((vehicle _dangerCausedBy) isKindOf ""Tank"")} && {_action_time < time}) then {" \n
                          "" \n
-                         "	[_this,getposASL _dangerCausedBy] call lambs_danger_fnc_rotateVehicle; " \n
+                         "	[_this,getPosASL _dangerCausedBy] call lambs_danger_fnc_rotateVehicle; " \n
                          "" \n
                          "}; " \n
                          "" \n
@@ -336,7 +336,7 @@ class FSM
                          "if (lambs_danger_debug_FSM) then {systemchat ""Danger.fsm HIT"";};" \n
                          "" \n
                          "// reset tactical time -- force movement! " \n
-                         "if (_onFoot) then {_this setVariable [""lastAction"",0];};" \n
+                         "if (_onFoot) then {_this setVariable [""lamb_danger_lastAction"",0];};" \n
                          "" \n
                          "// end " \n
                          "true "/*%FSM</STATEINIT""">*/;
@@ -999,7 +999,7 @@ class FSM
                          "// Enemy tank? Turn vehicle <-- already handled in the above function " \n
                          "//if (((vehicle _dangerCausedBy) isKindOf ""Tank"") && {speed _this < 12}) then {" \n
                          "" \n
-                         "	//[_this,getposASL _dangerCausedBy] call lambs_danger_fnc_rotateVehicle; " \n
+                         "	//[_this,getPosASL _dangerCausedBy] call lambs_danger_fnc_rotateVehicle; " \n
                          "" \n
                          "//};" \n
                          "" \n
@@ -1043,7 +1043,7 @@ class FSM
                          "		_dangerCausedBy = _x select 3;" \n
                          "	};" \n
                          "	true " \n
-                         "} count _queue;" \n
+                         "} count _queue; // _queue is a Magic Variable for AI FSMs" \n
                          "" \n
                          "// debug " \n
                          "//copyToClipBoard format [""%1 - dangerCause %2 - dangerPos %3 - dangerUntil %4 - dangerCausedBy %5 - queue %6 - onFoot %7 - Gesture time %8 - Action time %9 - Vehicle _this %10"",_this,_dangerCause,_dangerPos,_dangerUntil,_dangerCausedBy,_queue,_onFoot,_gesture_Time,_action_Time,vehicle _this];" \n

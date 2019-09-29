@@ -843,7 +843,7 @@ class FSM
                         init = /*%FSM<STATEINIT""">*/"" \n
                          "// script " \n
                          "if (_lastAction < time) then {" \n
-                         "	[_this,getpos _this,25] call lambs_danger_fnc_checkBody; " \n
+                         "	[_this,getPos _this,25] call lambs_danger_fnc_checkBody; " \n
                          "}; " \n
                          "" \n
                          "// stance " \n
