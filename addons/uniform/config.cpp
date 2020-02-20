@@ -60,7 +60,7 @@ class cfgVehicles {
             "insignia"
 		};
 		hiddenSelectionsTextures[] = {
-			"\lambs_uniform\data\texture\uniform_m98.paa"
+			"\uniform\data\texture\uniform_m98.paa"
 		};        
     };
     class LAMBS_Scout_F : LAMBS_Soldier_F {
@@ -71,7 +71,7 @@ class cfgVehicles {
     class LAMBS_Ranger_F : LAMBS_Scout_F {
         displayName = "Rifleman [M98] (Ranger)";
 		hiddenSelectionsTextures[] = {
-			"\lambs_uniform\data\texture\uniform_m98_ranger.paa"
+			"\uniform\data\texture\uniform_m98_ranger.paa"
 		};                
     };    
     // Desert M03 
@@ -83,7 +83,7 @@ class cfgVehicles {
             "insignia"
 		};
 		hiddenSelectionsTextures[] = {
-			"\lambs_uniform\data\texture\uniform_m03.paa"
+			"\uniform\data\texture\uniform_m03.paa"
 		};        
     };
     class LAMBS_ScoutD_F : LAMBS_SoldierD_F {
@@ -102,7 +102,7 @@ class cfgVehicles {
             "insignia"
 		};
 		hiddenSelectionsTextures[] = {
-			"\lambs_uniform\data\texture\uniform_mc.paa"
+			"\uniform\data\texture\uniform_mc.paa"
 		};        
     };
     class LAMBS_RunnerMC_F : LAMBS_SoldierMC_F {
@@ -127,7 +127,7 @@ class cfgVehicles {
             "insignia"
 		};
 		hiddenSelectionsTextures[] = {
-			"\lambs_uniform\data\texture\uniform_snow.paa"
+			"\uniform\data\texture\uniform_snow.paa"
 		};        
     };
     class LAMBS_ScoutS_F : LAMBS_SoldierS_F {
@@ -147,7 +147,7 @@ class cfgVehicles {
             "insignia"
 		};
 		hiddenSelectionsTextures[] = {
-			"\lambs_uniform\data\texture\uniform_black.paa"
+			"\uniform\data\texture\uniform_black.paa"
 		};        
     };
     class LAMBS_ScoutB_F : LAMBS_SoldierB_F {
@@ -168,7 +168,7 @@ class cfgVehicles {
             "insignia"
 		};
 		hiddenSelectionsTextures[] = {
-			"\lambs_uniform\data\texture\uniform_m98.paa"
+			"\uniform\data\texture\uniform_m98.paa"
 		};       
     };
 
@@ -185,7 +185,7 @@ class cfgVehicles {
             "insignia"
         };
         hiddenSelectionsTextures[] = {
-            "\lambs_uniform\data\texture\coverall_m98.paa"
+            "\uniform\data\texture\coverall_m98.paa"
         };           
     };
 };

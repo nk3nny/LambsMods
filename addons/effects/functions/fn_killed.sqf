@@ -31,7 +31,7 @@ _sound = switch (_surfaceType) do {
     case "#GdtDirt";
     case "#GdtStratisConcrete";
     case "#GdtConcrete";
-    case default {selectRandom lambs_unit_sfx_bodyfall_concrete};
+    default {selectRandom lambs_unit_sfx_bodyfall_concrete};
 };
 
 // let the body hit the floor 

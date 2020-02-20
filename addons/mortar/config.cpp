@@ -1,9 +1,9 @@
 class CfgPatches {
   class lambs_mortar {
     units[] = {
-		"LAMBS_Mortar_01_F",
-		"LAMBS_Mortar_01_weapon_F",
-		"LAMBS_Mortar_01_support_F"
+		//"LAMBS_Mortar_01_F",
+		//"LAMBS_Mortar_01_weapon_F",
+		//"LAMBS_Mortar_01_support_F"
 	};
     weapons[] = {
 		"LAMBS_mortar_82mm"
@@ -15,13 +15,14 @@ class CfgPatches {
 		"A3_Weapons_F"
 		//"A3_Static_F_Mortar_01"
 	};
-    version = "1.1"; 
-    versionStr = "1.1";
+    version = "1.2"; 
+    versionStr = "1.2";
     author = "nopryl.no";
     authorUrl = "http://www.nopryl.no";
   };
 };
 
+/*
 class CfgVehicles {
 	// Mortar 
 	class LandVehicle; 
@@ -75,7 +76,7 @@ class CfgVehicles {
 		displayName = "Folded Mk6 Mortar Bipod [High Dispersion]";
 	}; 
 };
-
+*/
 class CfgWeapons {
 	class CannonCore; 
 	class mortar_82mm : CannonCore {

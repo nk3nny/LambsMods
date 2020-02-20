@@ -33,7 +33,7 @@ class cfgWeapons {
         author = "nopryl.no";
         displayName = "Carrier Lite (Brown)";
         hiddenSelections[] = {"camo"};
-        hiddenSelectionsTextures[] = {"\lambs_vest\data\texture\vest_brown.paa"};
+        hiddenSelectionsTextures[] = {"\vest\data\texture\vest_brown.paa"};
         class ItemInfo: ItemInfo {
 			hiddenSelections[]= {"camo"};
 		};
@@ -44,7 +44,7 @@ class cfgWeapons {
         author = "nopryl.no";
         displayName = "Carrier Rig (Brown)";
         hiddenSelections[] = {"camo"};
-        hiddenSelectionsTextures[] = {"\lambs_vest\data\texture\vest_brown.paa"};
+        hiddenSelectionsTextures[] = {"\vest\data\texture\vest_brown.paa"};
         class ItemInfo: ItemInfo {
 			hiddenSelections[]= {"camo"};
         }; 
@@ -54,7 +54,7 @@ class cfgWeapons {
         author = "nopryl.no";
         displayName = "Carrier Alternative (Brown)";
         hiddenSelections[] = {"camo"};
-        hiddenSelectionsTextures[] = {"\lambs_vest\data\texture\vest_brown_LT2.paa"};
+        hiddenSelectionsTextures[] = {"\vest\data\texture\vest_brown_LT2.paa"};
         class ItemInfo: ItemInfo {
 			hiddenSelections[]= {"camo"};
 		};

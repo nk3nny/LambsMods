@@ -30,28 +30,28 @@ class CfgVehicles {
   class LAMBS_B_Kitbag_m98 : B_kitBag_rgr {
     author = "nopryl.no";
     displayName = "Kitbag (M98)";
-    hiddenSelectionsTextures[] = {"\lambs_backpack\data\texture\kitbag_m98.paa"};
+    hiddenSelectionsTextures[] = {"\backpack\data\texture\kitbag_m98.paa"};
   };
   class LAMBS_B_AssaultPack_m98 : B_AssaultPack_rgr {
     author = "nopryl.no";
     displayName = "Assault Pack (M98)";
-    hiddenSelectionsTextures[] = {"\lambs_backpack\data\texture\assault_m98.paa"};
+    hiddenSelectionsTextures[] = {"\backpack\data\texture\assault_m98.paa"};
   };  
   // Medic 
   class LAMBS_B_Kitbag_m98_medic : B_kitBag_rgr {
     author = "nopryl.no";
     displayName = "Kitbag (M98) [Medic]";
-    hiddenSelectionsTextures[] = {"\lambs_backpack\data\texture\kitbag_m98_medic.paa"};
+    hiddenSelectionsTextures[] = {"\backpack\data\texture\kitbag_m98_medic.paa"};
   };
   // Snow 
   class LAMBS_B_Carryall_Snow : B_Carryall_oli {
     author = "nopryl.no";
     displayName = "Carryall Backpack (Snow)";
-    hiddenSelectionsTextures[] = {"\lambs_backpack\data\texture\carry_snow.paa"};
+    hiddenSelectionsTextures[] = {"\backpack\data\texture\carry_snow.paa"};
   };
   class LAMBS_B_AssaultPack_Snow : B_AssaultPack_rgr {
     author = "nopryl.no";
     displayName = "Assault Pack (Snow)";
-    hiddenSelectionsTextures[] = {"\lambs_backpack\data\texture\assault_snow.paa"};
+    hiddenSelectionsTextures[] = {"\backpack\data\texture\assault_snow.paa"};
   };    
 };
